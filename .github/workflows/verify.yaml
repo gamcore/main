@@ -1,0 +1,16 @@
+name: Verification
+on: 
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      # - name: Setup Goo
+      #   uses: goo-app-manager/action@v0

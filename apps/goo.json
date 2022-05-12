@@ -1,0 +1,21 @@
+{
+  "description": "Cross-Platform command line installer",
+  "homepage": "https://github.com/goo-app-manager/goo",
+  "license": {
+    "name": "Apache-2.0 license",
+    "url": "https://github.com/goo-app-manager/goo/blob/main/LICENSE"
+  },
+  "executable": [
+    "goo"
+  ],
+  "updates": {
+    "one_file": true,
+    "type": "github",
+    "url": "https://github.com/goo-app-manager/goo",
+    "pattern": {
+      "windows": "https://github.com/goo-app-manager/goo/releases/download/{{.Version}}/goo-windows-{{.Arch}}.exe",
+      "linux": "https://github.com/goo-app-manager/goo/releases/download/{{.Version}}/goo-linux-{{.Arch}}",
+      "macos": "https://github.com/goo-app-manager/goo/releases/download/{{.Version}}/goo-darwin-{{.Arch}}"
+    }
+  }
+}
